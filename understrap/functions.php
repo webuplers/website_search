@@ -4,7 +4,7 @@
  *
  * @package UnderStrap
  */
-
+// Developed By: Sunit 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
@@ -42,6 +42,7 @@ if ( class_exists( 'Jetpack' ) ) {
 foreach ( $understrap_includes as $file ) {
 	require_once get_theme_file_path( $understrap_inc_dir . $file );
 }
+// Enqueue the required CSS and JS files
 function enqueue_theme_movie_js_css() {
     wp_enqueue_script( 'movie', get_stylesheet_directory_uri() . '/js/movie.js', array( 'jquery' ) );
     wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' );
